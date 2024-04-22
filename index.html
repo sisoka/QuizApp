@@ -4,37 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz Selection</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0; /* Grey background */
-    }
-    .container {
-      text-align: center;
-      margin-top: 50px;
-    }
-    .form-control {
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      margin-bottom: 10px;
-    }
-    .btn {
-      padding: 8px 15px;
-      border: none;
-      border-radius: 4px;
-      background-color: #4CAF50; /* Green button */
-      color: white;
-      cursor: pointer;
-    }
-  </style>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <div class="container">
     <h1>Quiz Selection</h1>
     <div>
       <label for="triviaCategory">Category:</label>
-      <select id="triviaCategory" class="form-control">
+      <select id="triviaCategory" class="drop-down">
         <option value="any">Any Category</option>
         <option value="9">General Knowledge</option>
         <option value="10">Entertainment: Books</option>
@@ -64,14 +41,16 @@
     </div>
     <div>
       <label for="triviaDifficulty">Difficulty:</label>
-      <select id="triviaDifficulty" class="form-control">
+      <select id="triviaDifficulty" class="drop-down">
         <option value="any">Any Difficulty</option>
         <option value="easy">Easy</option>
         <option value="medium">Medium</option>
         <option value="hard">Hard</option>
       </select>
     </div>
-    <button class="btn">Start Quiz</button>
+    <button class="btnStart">Start Quiz</button>
   </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
