@@ -1,0 +1,125 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Film",
+            "question": "Which actress danced the twist with John Travolta in &#039;Pulp Fiction&#039;?",
+            "correct_answer": "Uma Thurman",
+            "incorrect_answers": [
+                "Kathy Griffin",
+                "Pam Grier",
+                "Bridget Fonda"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Film",
+            "question": "What breed of dog was Marley in the film &quot;Marley &amp; Me&quot; (2008)?",
+            "correct_answer": "Labrador Retriever",
+            "incorrect_answers": [
+                "Golden Retriever",
+                "Dalmatian",
+                "Shiba Inu"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Film",
+            "question": "When was the movie &#039;Con Air&#039; released?",
+            "correct_answer": "1997",
+            "incorrect_answers": [
+                "1985",
+                "1999",
+                "1990"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Film",
+            "question": "Who played the female lead in the 1933 film &quot;King Kong&quot;?",
+            "correct_answer": "Fay Wray",
+            "incorrect_answers": [
+                "Jean Harlow",
+                "Vivien Leigh",
+                "Mae West"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Film",
+            "question": "What was Dorothy&#039;s surname in &#039;The Wizard Of Oz&#039;?",
+            "correct_answer": "Gale",
+            "incorrect_answers": [
+                "Perkins",
+                "Day",
+                "Parker"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Film",
+            "question": "What is the name of the island that &quot;Jurassic Park&quot; is built on?",
+            "correct_answer": "Isla Nublar",
+            "incorrect_answers": [
+                "Isla Sorna",
+                "Isla Muerta",
+                "Isla Pena"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Film",
+            "question": "Who played Deputy Marshal Samuel Gerard in the 1993 film &quot;The Fugitive&quot;?",
+            "correct_answer": "Tommy Lee Jones",
+            "incorrect_answers": [
+                "Harrison Ford",
+                "Harvey Keitel",
+                "Martin Landau"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Film",
+            "question": "Which of the following was not one of &quot;The Magnificent Seven&quot;?",
+            "correct_answer": "Clint Eastwood",
+            "incorrect_answers": [
+                "Steve McQueen",
+                "Charles Bronson",
+                "Robert Vaughn"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Film",
+            "question": "The 1996 film &#039;Fargo&#039; is primarily set in which US state?",
+            "correct_answer": "Minnesota",
+            "incorrect_answers": [
+                "North Dakota",
+                "South Dakota",
+                "Wisconsin"
+            ]
+        },
+        {
+            "type": "multiple",
+            "difficulty": "easy",
+            "category": "Entertainment: Film",
+            "question": "Which of these Movies was NOT released in 1996?",
+            "correct_answer": "Gladiator",
+            "incorrect_answers": [
+                "Independence Day",
+                "The Rock",
+                "Mission: Impossible"
+            ]
+        }
+    ]
+}
