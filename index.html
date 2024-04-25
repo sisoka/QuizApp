@@ -10,7 +10,9 @@
   <div class="container">
     <h1>Quiz Selection</h1>
     <div>
-      <label for="triviaCategory">Category:</label>
+        <div class="class-label">
+            <label for="triviaCategory">Category:</label>
+        </div>
       <select id="triviaCategory" class="drop-down">
         <option value="any">Any Category</option>
         <option value="9">General Knowledge</option>
@@ -40,13 +42,28 @@
       </select>
     </div>
     <div>
-      <label for="triviaDifficulty">Difficulty:</label>
+        <div class="class-label">
+            <label for="triviaDifficulty" >Difficulty:</label>
+        </div>
       <select id="triviaDifficulty" class="drop-down">
         <option value="any">Any Difficulty</option>
         <option value="easy">Easy</option>
         <option value="medium">Medium</option>
         <option value="hard">Hard</option>
       </select>
+    </div>
+    <div>
+        <div class="class-label">
+            <label for="triviaQuestionAmount">Number Of Question:</label>
+        </div>
+        <select id="triviaQuestionAmount" class="drop-down">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+        </select>
+
     </div>
     <button class="btnStart">Start Quiz</button>
   </div>
