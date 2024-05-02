@@ -1,8 +1,7 @@
 function loadQuizPage(){
-        window.location.href = "quizPage.html";
-        let apiUrl = generateApiUrl();
-        console.log(apiUrl);
-        getQuestionsInitially(apiUrl);
+    let apiUrl = generateApiUrl();
+    console.log(apiUrl);
+    getQuestionsInitially(apiUrl);    
 }
 
 function generateApiUrl(){
@@ -14,8 +13,12 @@ function generateApiUrl(){
 
 async function getQuestionsInitially(apiUrl) {
     const response = await fetch(apiUrl);
-    const qustions = await response.json();
-    console.log(qustions);
+    if (response.ok){
+
+        const questions = await response.json();
+    }
+
+    window.location.href = "quizPage.html";
 }
 
 
@@ -26,7 +29,7 @@ const dom ={
     selectQuestionsAmount: document.querySelector('#triviaQuestionAmount')
 }
 
-let qustions = [];
+let questions = [];
 
 dom.startBtn.addEventListener('click',loadQuizPage);
 
