@@ -14,8 +14,8 @@ function generateApiUrl(){
 async function getQuestionsInitially(apiUrl) {
     const response = await fetch(apiUrl);
     if (response.ok){
-
         const questions = await response.json();
+        localStorage.setItem('questions', JSON.stringify(questions.results));
     }
 
     window.location.href = "quizPage.html";

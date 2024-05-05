@@ -13,19 +13,20 @@
                 <div class="progress-bar-inner"></div>
             </div>
             <div class="question-number">Question <span id="question-number">1</span> of 20</div>
-            <div class="question-title" id="question-title">What is 2 + 2?</div>
-            <form>
-                <input type="checkbox" id="option1" name="answer1" value="red">
-                <label for="option1">Red</label><br>
-                <input type="checkbox" id="option2" name="answer2" value="green">
-                <label for="option2">Green</label><br>
-                <input type="checkbox" id="option3" name="answer3" value="blue">
-                <label for="option3">Blue</label><br>
-                <input type="checkbox" id="option4" name="answer4" value="yellow">
-                <label for="option4">Yellow</label><br>
+            <div class="question-title" id="question-title"></div>
+            <form id="options-form">
+                <input type="radio" id="option1" name="answer1">
+                <label for="option1" id="label-option1"></label><br>
+                <input type="radio" id="option2" name="answer2">
+                <label for="option2" id="label-option2"></label><br>
+                <input type="radio" id="option3" name="answer3">
+                <label for="option3" id="label-option3"></label><br>
+                <input type="radio" id="option4" name="answer4">
+                <label for="option4" id="label-option4"></label><br>
               </form>
             <button class="next-button" id="next-button">Next</button>
         </div>
     </div>
+    <script src="quizPage.js"></script>
 </body>
 </html>
