@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', function(){
     })
 
     function loadOptions(options, correctAnswer){
-        let randomNumber = Math.floor(Math.random() * 4);//here we get random number between 0 and 3
-        options.splice(randomNumber, 0, correctAnswer);//Here we push the correct answer to a random position
+        let randomNumber = Math.floor(Math.random() * 4); //here we get random number between 0 and 3
+        options.splice(randomNumber, 0, correctAnswer); //Here we push the correct answer to a random position
 
         dom.firstLabel.innerHTML = options[0];
         dom.secondLabel.innerHTML = options[1];
@@ -45,7 +45,23 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     function nextButtonClick(){
+        const selectedOption = document.querySelector('input:checked');
+        if (selectedOption){
+
+            if(currentQuestionIndex < totalQuestions - 1){                
+                currentQuestionIndex++;
+                loadQuestion();
+                optionsForm.reset();
+            }
+            else{
+                alert('This was the last question.');
+            }
+        }
+        else{
+            alert('Please select an answer first!')
+        }
     }
 
     loadQuestion();
+    dom.nextBtn.addEventListener('click', nextButtonClick);
 })
