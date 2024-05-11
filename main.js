@@ -1,25 +1,42 @@
 function loadQuizPage(){
-    let apiUrl = generateApiUrl();
-    console.log(apiUrl);
-    getQuestionsInitially(apiUrl);    
-}
-
-function generateApiUrl(){
+    //let apiUrl = generateApiUrl();
     let amount = dom.selectQuestionsAmount.value;
-    let category = dom.selectCategory.value;
+    let category = dom.selectCategory.value ;
     let difficulty = dom.selectDifficulty.value;
-    return `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}`;
+
+    window.location.href = `quizPage.html?amount=${amount}&category=${category}&difficulty=${difficulty}`;
+    //getQuestionsInitially();    
 }
 
-async function getQuestionsInitially(apiUrl) {
-    const response = await fetch(apiUrl);
-    if (response.ok){
-        const questions = await response.json();
-        localStorage.setItem('questions', JSON.stringify(questions.results));
-    }
+// function generateApiUrl(){
+//     let amount = dom.selectQuestionsAmount.value;
+//     let category = dom.selectCategory.value ;
+//     let difficulty = dom.selectDifficulty.value;
 
-    window.location.href = "quizPage.html";
-}
+//     let url = `https://opentdb.com/api.php?type=multiple&amount=${amount}`;
+//     if (category != "any"){
+//         url += `&category=${category}`;
+//     }
+//     if (difficulty != "any"){
+//         url += `&difficulty=${difficulty}`;
+//     }
+
+//     return url;
+// }
+
+// async function getQuestionsInitially(apiUrl) {
+//     let amount = dom.selectQuestionsAmount.value;
+//     let category = dom.selectCategory.value ;
+//     let difficulty = dom.selectDifficulty.value;
+
+//     const response = await fetch(apiUrl);
+//     if (response.ok){
+//         const questions = await response.json();
+//         localStorage.setItem('questions', JSON.stringify(questions.results));
+//     }
+
+//     window.location.href = `quizPage.html?amount=${amount}&category=${category}&difficulty=${difficulty}`;
+// }
 
 
 const dom ={
