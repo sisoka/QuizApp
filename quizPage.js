@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(){
+//document.addEventListener('DOMContentLoaded', function(){
     const questions = JSON.parse(localStorage.getItem('questions')); //Here we get the questions from the local storage
     const totalQuestions = questions.length;
     let currentQuestionIndex = 0;
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function(){
         fourthLabel: document.querySelector('#label-option4')
     }
     
-    dom.optionsForm.addEventListener('change', function(event){
+    dom.optionsForm.addEventListener('change', function(event){//only one answer could be chosen
         const selectedRadioButton = event.target;
         dom.optionsForm.querySelectorAll('input[type=radio]').forEach(radioBtn=>{
             if (radioBtn != selectedRadioButton){
@@ -48,10 +48,10 @@ document.addEventListener('DOMContentLoaded', function(){
         const selectedOption = document.querySelector('input:checked');
         if (selectedOption){
 
-            if(currentQuestionIndex < totalQuestions - 1){                
+            if(currentQuestionIndex < totalQuestions - 1){
                 currentQuestionIndex++;
                 loadQuestion();
-                optionsForm.reset();
+                dom.optionsForm.reset();
             }
             else{
                 alert('This was the last question.');
@@ -64,4 +64,4 @@ document.addEventListener('DOMContentLoaded', function(){
 
     loadQuestion();
     dom.nextBtn.addEventListener('click', nextButtonClick);
-})
+//})
