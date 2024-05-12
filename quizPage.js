@@ -42,15 +42,10 @@ async function getQuestionsInitially(currentQuestionIndex, dom) {
         const questionsJson = await response.json();
         questions.push(...questionsJson.results);
         loadQuestion(currentQuestionIndex, dom);
-        //localStorage.setItem('questions', JSON.stringify(questions.results));
     }
 }
 
 document.addEventListener('DOMContentLoaded', () =>{
-    //const questions = JSON.parse(localStorage.getItem('questions')); //Here we get the questions from the local storage
-    //let currentQuestionIndex = 0;
-
-    
     const dom = {
         questionNumber: document.querySelector('#question-number'),
         totalQuestions: document.querySelector('#total-questions'),
@@ -92,6 +87,5 @@ document.addEventListener('DOMContentLoaded', () =>{
         }
     }
     getQuestionsInitially(currentQuestionIndex, dom);
-    //loadQuestion();
     dom.nextBtn.addEventListener('click', nextButtonClick);
 },currentQuestionIndex=0);
