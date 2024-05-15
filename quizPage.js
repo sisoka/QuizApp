@@ -1,3 +1,5 @@
+let userAnswers = [];
+
 function loadOptions(options, correctAnswer, dom){
     let randomNumber = Math.floor(Math.random() * 4); //here we get random number between 0 and 3
     options.splice(randomNumber, 0, correctAnswer); //Here we push the correct answer to a random position
@@ -45,6 +47,10 @@ async function getQuestionsInitially(currentQuestionIndex, dom) {
     }
 }
 
+function submitButtonClick(dom){
+    window.location.href = `resultsPage.html`;
+}
+
 document.addEventListener('DOMContentLoaded', () =>{
     const dom = {
         questionNumber: document.querySelector('#question-number'),
@@ -52,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
         title: document.querySelector('.question-title'),
         nextBtn: document.querySelector('.next-button'),
+        submitBtn: document.querySelector('.submit-button'),
         optionsForm: document.querySelector('#options-form'),
         
         firstLabel: document.querySelector('#label-option1'),
@@ -73,13 +80,24 @@ document.addEventListener('DOMContentLoaded', () =>{
         const selectedOption = document.querySelector('input:checked');
         if (selectedOption){
 
+            const answerText = selectedOption.nextElementSibling.innerHTML;
+            const correctAnswer = questions[currentQuestionIndex].correct_answer;
+            userAnswers.push({
+                question: questions[currentQuestionIndex].question,
+                selectedAnswer: answerText,
+                correctAnswer: correctAnswer,
+                isCorrect: answerText === correctAnswer
+            });
+
             if(currentQuestionIndex < questions.length - 1){
                 currentQuestionIndex++;
                 loadQuestion(currentQuestionIndex, dom);
                 dom.optionsForm.reset();
             }
             else{
-                alert('This was the last question.');
+                localStorage.setItem('quizResults', JSON.stringify(userAnswers));
+                dom.nextBtn.disabled = true;
+                dom.submitBtn.hidden = false;
             }
         }
         else{
@@ -88,4 +106,5 @@ document.addEventListener('DOMContentLoaded', () =>{
     }
     getQuestionsInitially(currentQuestionIndex, dom);
     dom.nextBtn.addEventListener('click', nextButtonClick);
+    dom.submitBtn.addEventListener('click', submitButtonClick);
 },currentQuestionIndex=0);
